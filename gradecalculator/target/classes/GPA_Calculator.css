@@ -1,0 +1,79 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #eef3ff, #ffffff);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial;
+}
+
+#titleLabel {
+    -fx-text-fill: #1f2937;
+}
+
+#courseGrid {
+    -fx-padding: 18px;
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-background-radius: 12px;
+    -fx-border-color: #d8e0ef;
+    -fx-border-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(31, 41, 55, 0.12), 12, 0.12, 0, 3);
+}
+
+#courseGrid Label {
+    -fx-text-fill: #374151;
+    -fx-font-size: 14px;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 7px;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 7px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 10px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #5b67d8;
+    -fx-effect: dropshadow(gaussian, rgba(91, 103, 216, 0.18), 6, 0.15, 0, 0);
+}
+
+#statusLabel {
+    -fx-font-size: 13px;
+    -fx-min-height: 18px;
+}
+
+#buttonBox {
+    -fx-padding: 2px 0 0 0;
+}
+
+.button {
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 9px 16px;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+#addCourseButton,
+#calculateButton {
+    -fx-background-color: #4f46e5;
+    -fx-text-fill: white;
+}
+
+#addCourseButton:hover,
+#calculateButton:hover {
+    -fx-background-color: #4338ca;
+}
+
+#resetButton {
+    -fx-background-color: #e5e7eb;
+    -fx-text-fill: #374151;
+}
+
+#resetButton:hover {
+    -fx-background-color: #d1d5db;
+}
+
+#gpaLabel {
+    -fx-text-fill: #312e81;
+}

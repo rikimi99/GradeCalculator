@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootPane" alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0"
+      fx:controller="com.riki.Main" spacing="18.0" styleClass="root-pane" stylesheets="@GPA_Calculator.css"
+      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="24.0" left="48.0" right="48.0" top="24.0" />
+   </padding>
+   <children>
+      <Label fx:id="titleLabel" text="Grade Calculator" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+
+      <GridPane fx:id="courseGrid" hgap="16.0" vgap="12.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" minWidth="170.0" prefWidth="210.0" />
+            <ColumnConstraints hgrow="ALWAYS" minWidth="180.0" prefWidth="294.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="32.0" prefHeight="32.0" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="courseCountLabel" text="Number of courses:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="courseCountField" promptText="Enter course count"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label fx:id="courseLabel" text="Course grade:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="gradeField" promptText="A, B, C, D, or F"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label fx:id="creditsLabel" text="Course credits:"
+                   GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="creditsField" promptText="Enter number of credits"
+                       GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+
+      <Label fx:id="statusLabel" text="" textFill="#b00020" visible="true" />
+
+      <HBox fx:id="buttonBox" alignment="CENTER" spacing="12.0">
+         <children>
+            <Button fx:id="addCourseButton" mnemonicParsing="false" text="Set Course Count" onAction="#addCourse" />
+            <Button fx:id="calculateButton" mnemonicParsing="false" text="Calculate GPA" onAction="#calculateGpa" />
+            <Button fx:id="resetButton" mnemonicParsing="false" text="Reset" onAction="#resetCalculator" />
+         </children>
+      </HBox>
+
+      <Label fx:id="gpaLabel" text="GPA: --" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
