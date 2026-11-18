@@ -1,0 +1,40 @@
+# Maven build output
+target/
+build/
+out/
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+
+# Java and JVM files
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code (keep shared workspace settings)
+**/.vscode/*
+!**/.vscode/settings.json
+!**/.vscode/extensions.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Editors and temporary files
+*.swp
+*~
